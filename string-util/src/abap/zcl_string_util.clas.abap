@@ -15,7 +15,7 @@ ENDCLASS.
 CLASS zcl_string_util IMPLEMENTATION.
 
   METHOD concatenate_hello.
-    rv_output = |Hello: { iv_string }!|.
+    rv_output = |Hello [{ iv_string }]!|.
   ENDMETHOD.
 
 ENDCLASS.
