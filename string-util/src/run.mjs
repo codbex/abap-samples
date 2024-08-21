@@ -10,4 +10,7 @@ async function initialize() {
 
 await initialize();
 
-await zcl_abap_app.run("Ivan");
+const params = {
+    iv_name: "Ivan"
+}
+await zcl_abap_app.run(params);
