@@ -1,8 +1,12 @@
-CLASS zcl_abap_app DEFINITION PUBLIC FINAL CREATE PUBLIC.
+CLASS zcl_abap_app DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC.
 
   PUBLIC SECTION.
-    CLASS-METHODS:
-      run.
+    CLASS-METHODS: run
+        IMPORTING
+          VALUE(iv_name) TYPE string.
 
 ENDCLASS.
 
@@ -12,8 +16,8 @@ CLASS zcl_abap_app IMPLEMENTATION.
     " Declare a variable to hold the result of the concatenation
     DATA: lv_message TYPE string.
 
-    " Call the static method from zcl_string_util and store the result
-    lv_message = zcl_string_util=>concatenate_hello( iv_input = 'world' ).
+    " Call the static method from zcl_string_util
+    lv_message = zcl_string_util=>concatenate_hello( iv_input = 'John' ).
 
     " Print the message returned by the concatenate_hello method
     WRITE: / lv_message.

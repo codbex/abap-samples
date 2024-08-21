@@ -10,4 +10,4 @@ async function initialize() {
 
 await initialize();
 
-await zcl_abap_app.run();
+await zcl_abap_app.run("Ivan");
