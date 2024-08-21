@@ -15,7 +15,7 @@ ENDCLASS.
 CLASS zcl_string_util IMPLEMENTATION.
 
   METHOD concatenate_hello.
-    CONCATENATE 'Hello' iv_input INTO rv_output SEPARATED BY space.
+    rv_output = |Hello { iv_input }|.
   ENDMETHOD.
 
 ENDCLASS.
