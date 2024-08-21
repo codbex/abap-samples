@@ -27,3 +27,4 @@ jobs:
         cd string-util
         chmod +x build-linux.sh
         ./build-linux.sh
+        node dist/run.mjs
