@@ -90,13 +90,7 @@
     "classic_exceptions_overlap": true,
     "cloud_types": true,
     "colon_missing_space": true,
-    "commented_code": {
-      "allowIncludeInFugr": false,
-      "exclude": [
-        "intf",
-        "otgr"
-      ]
-    },
+    "commented_code": false,
     "constant_classes": true,
     "constructor_visibility_public": true,
     "contains_tab": true,

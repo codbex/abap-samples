@@ -16,7 +16,10 @@ CLASS zcl_abap_app IMPLEMENTATION.
     " Declare a variable to hold the result of the concatenation
     DATA: lv_message TYPE string.
 
-    " Call the static method from zcl_string_util
+    " this prints: app.out - Hello: !
+    "lv_message = zcl_string_util=>concatenate_hello( iv_input = iv_name ).
+
+    " this prints: app.out - Hello: !
     lv_message = zcl_string_util=>concatenate_hello( iv_input = 'John' ).
 
     " Print the message returned by the concatenate_hello method
