@@ -11,6 +11,6 @@ async function initialize() {
 await initialize();
 
 const params = {
-    iv_name: "John"
+    iv_string: "John Doe"
 }
 await zcl_abap_app.run(params);
