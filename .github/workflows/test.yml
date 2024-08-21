@@ -18,4 +18,5 @@ jobs:
     - name: Transpile ABAP
       run: |
         cd string-util
+        chmod +x build-linux.sh
         ./build-linux.sh
