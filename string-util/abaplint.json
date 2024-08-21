@@ -14,10 +14,6 @@
       "files": "/src/**/*.*",
       "folder": "/lint_deps",
       "url": "https://github.com/abaplint/deps"
-    },
-    {
-      "files": "/**/*.*",
-      "folder": "/../../../../../root/registry/public/kronos/src/abap"
     }
   ],
   "rules": {
