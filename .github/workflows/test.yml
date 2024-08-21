@@ -8,14 +8,14 @@ permissions:
 
 jobs:
   test:
-    runs-on: mac-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: '20'
-    - name: npm install
+    - name: Transpile ABAP
       run: |
         cd string-util
-        ./build-mac.sh
+        ./build-linux.sh
