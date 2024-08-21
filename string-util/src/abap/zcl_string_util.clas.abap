@@ -4,7 +4,7 @@ CLASS zcl_string_util DEFINITION
   CREATE PUBLIC.
 
   PUBLIC SECTION.
-    CLASS-METHODS:: concatenate_hello
+    CLASS-METHODS: concatenate_hello
       IMPORTING
         VALUE(iv_input) TYPE string
       RETURNING
@@ -15,7 +15,7 @@ ENDCLASS.
 CLASS zcl_string_util IMPLEMENTATION.
 
   METHOD concatenate_hello.
-    rv_output = |Hello { iv_input }|.
+    CONCATENATE 'Hello' iv_input INTO rv_output SEPARATED BY space.
   ENDMETHOD.
 
 ENDCLASS.
