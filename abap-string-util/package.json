@@ -1,5 +1,5 @@
 {
-  "name": "string-util",
+  "name": "abap-string-util",
   "private": true,
   "version": "1.0.0",
   "scripts": {

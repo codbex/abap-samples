@@ -1,5 +1,5 @@
 {
-  "guid" : "string-util",
+  "guid" : "abap-string-util",
   "actions" : [
     {
       "name" : "build",

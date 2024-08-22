@@ -24,6 +24,6 @@ jobs:
       run: npm i -g typescript
     - name: Transpile ABAP
       run: |
-        cd string-util
+        cd abap-string-util
         chmod +x build-linux.sh
         ./build-linux.sh

@@ -1,6 +1,6 @@
 import { request, response } from "sdk/http";
 import { ConcatenateParamsDTO, ConcatenateResultDTO } from "./concatenate-dto"
-import { execute } from "/string-util/dist/run.mjs"
+import { execute } from "/abap-string-util/dist/run.mjs"
 
 const params: ConcatenateParamsDTO = request.getJSON();
 

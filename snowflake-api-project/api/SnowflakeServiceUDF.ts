@@ -1,6 +1,6 @@
 import { request, response } from "sdk/http";
 import { FunctionParamsDTO, FunctionResultDTO } from "./function-data-dto"
-import { execute } from "/string-util/dist/run.mjs"
+import { execute } from "/abap-string-util/dist/run.mjs"
 
 const dto: FunctionParamsDTO = request.getJSON();
 
