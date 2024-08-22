@@ -1,0 +1,12 @@
+{
+    "constraints": [
+        {
+            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts",
+            "method": "POST",
+            "scope": "HTTP",
+            "roles": [
+                "PUBLIC"
+            ]
+        }
+    ]
+}
