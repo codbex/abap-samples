@@ -1,7 +1,7 @@
 {
     "constraints": [
         {
-            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts/udf",
+            "path": "/ts/snowflake-api-project/api/SnowflakeServiceUDF.ts",
             "method": "POST",
             "scope": "HTTP",
             "roles": [
@@ -9,7 +9,7 @@
             ]
         },
         {
-            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts/concatenate",
+            "path": "/ts/snowflake-api-project/api/SnowflakeServiceConcatenate.ts",
             "method": "POST",
             "scope": "HTTP",
             "roles": [
