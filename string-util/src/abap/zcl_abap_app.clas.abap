@@ -5,8 +5,11 @@ CLASS zcl_abap_app DEFINITION
 
   PUBLIC SECTION.
     CLASS-METHODS: run
-        IMPORTING
-          VALUE(iv_string) TYPE string.
+      IMPORTING
+        VALUE(iv_string1) TYPE string
+        VALUE(iv_string2) TYPE string
+      RETURNING
+        VALUE(rv_output) TYPE string.
 
 ENDCLASS.
 
@@ -16,10 +19,11 @@ CLASS zcl_abap_app IMPLEMENTATION.
     " Declare a variable to hold the result of the concatenation
     DATA: lv_message TYPE string.
 
-    lv_message = zcl_string_util=>concatenate_hello( iv_string = iv_string ).
+    lv_message = zcl_string_util=>concatenate_strings(
+        iv_string1 = iv_string1
+        iv_string2 = iv_string2 ).
 
-    " Print the message returned by the concatenate_hello method
-    WRITE: / lv_message.
+    rv_output = |{ iv_string1 }{ iv_string2 }|.
   ENDMETHOD.
 
 ENDCLASS.

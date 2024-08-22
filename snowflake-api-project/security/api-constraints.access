@@ -1,7 +1,15 @@
 {
     "constraints": [
         {
-            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts",
+            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts/udf",
+            "method": "POST",
+            "scope": "HTTP",
+            "roles": [
+                "PUBLIC"
+            ]
+        },
+        {
+            "path": "/ts/snowflake-api-project/api/SnowflakeService.ts/concatenate",
             "method": "POST",
             "scope": "HTTP",
             "roles": [

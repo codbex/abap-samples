@@ -12,9 +12,12 @@ export async function execute(parameters) {
     await initialize();
 
     const defaultParams = {
-        iv_string: "John Doe"
+        iv_string1: "Hello ",
+        iv_string2: "John Doe"
     };
     const params = parameters ? parameters : defaultParams;
 
-    await zcl_abap_app.run(params);
+    const result = await zcl_abap_app.run(params);
+    console.log("Received result: " + JSON.stringify(result));
+    return result.value;
 }
