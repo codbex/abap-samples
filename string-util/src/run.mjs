@@ -8,9 +8,13 @@ async function initialize() {
     await initializeABAP();
 }
 
-await initialize();
+export async function execute(parameters) {
+    await initialize();
 
-const params = {
-    iv_string: "John Doe"
+    const defaultParams = {
+        iv_string: "John Doe"
+    };
+    const params = parameters ? parameters : defaultParams;
+
+    await zcl_abap_app.run(params);
 }
-await zcl_abap_app.run(params);
