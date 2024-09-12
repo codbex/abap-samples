@@ -2,7 +2,8 @@
 set -e
 
 echo '------------------ Executing Linux build script... ------------------'
-echo "------------------ Script path: $(realpath "$0") ------------------"
+script_path=$(realpath "$0")
+echo "------------------ Script path: $script_path ------------------"
 
 rm -rf dist
 rm -rf node_modules
@@ -28,4 +29,4 @@ esbuild src/run.mjs --tsconfig=./tsconfig.json --bundle --outdir=dist --format=e
     --inject:./src/lib/polyfills/buffer.js --inject:./src/lib/polyfills/process.js \
     --out-extension:.js=.mjs
 
-echo '------------------ Linux build script completed ------------------'
+echo "------------------ Linux build script $script_path completed ------------------"
