@@ -1,9 +1,13 @@
 # fail the whole script if any command bellow fails
 set -e
 
-echo '------------------ Executing Linux build script... ------------------'
+log() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') --- $1"
+}
+log "Executing Linux build script..."
+
 script_path=$(realpath "$0")
-echo "------------------ Script path: $script_path ------------------"
+log "Script path: $script_path"
 
 rm -rf dist
 rm -rf node_modules
@@ -13,6 +17,7 @@ mkdir dist
 npm install
 
 # check package.json for more details
+log "Transpiling the ABAP code..."
 npm run transpile
 
 # disable abaplint
@@ -22,6 +27,7 @@ npm run transpile
 # and replaces all occurrences of %23 with # in those files.
 find . -name '*.mjs' -print | xargs sed -i 's/%23/#/g'
 
+log "Packaging the code..."
 esbuild src/run.mjs --tsconfig=./tsconfig.json --bundle --outdir=dist --format=esm --target=es2022 \
     --external:tls --external:net --external:util --external:crypto --external:zlib \
     --external:http --external:https --external:fs --external:path --external:url \
@@ -29,4 +35,4 @@ esbuild src/run.mjs --tsconfig=./tsconfig.json --bundle --outdir=dist --format=e
     --inject:./src/lib/polyfills/buffer.js --inject:./src/lib/polyfills/process.js \
     --out-extension:.js=.mjs
 
-echo "------------------ Linux build script $script_path completed ------------------"
+log "Linux build script $script_path completed!"
