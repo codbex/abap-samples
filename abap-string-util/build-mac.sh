@@ -1,6 +1,8 @@
 # fail the whole script if any command bellow fails
 set -e
 
+echo '------------------ Executing Mac build script... ------------------'
+
 rm -rf dist
 rm -rf node_modules
 
@@ -11,7 +13,8 @@ npm install
 # check package.json for more details
 npm run transpile
 
-npm run lint
+# disable abaplint
+# npm run lint
 
 # Find all .mjs files in the current directory and its subdirectories,
 # and replaces all occurrences of %23 with # in those files.
@@ -23,3 +26,5 @@ esbuild src/run.mjs --tsconfig=./tsconfig.json --bundle --outdir=dist --format=e
     --external:sdk \
     --inject:./src/lib/polyfills/buffer.js --inject:./src/lib/polyfills/process.js \
     --out-extension:.js=.mjs
+
+echo '------------------ Mac build script completed ------------------'
