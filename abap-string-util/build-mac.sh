@@ -2,6 +2,7 @@
 set -e
 
 echo '------------------ Executing Mac build script... ------------------'
+echo "------------------ Script path: $(realpath "$0") ------------------"
 
 rm -rf dist
 rm -rf node_modules
