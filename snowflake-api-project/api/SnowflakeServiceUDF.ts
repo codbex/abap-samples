@@ -13,7 +13,10 @@ for (let rowData of dto.data) {
 
     const abapParams = {
         iv_string1: params[0],
-        iv_string2: params[1]
+        iv_string2: params[1],
+        iv_string3: params[2],
+        iv_string4: params[3]
+
     };
     const abapResult = await execute(abapParams);
 
