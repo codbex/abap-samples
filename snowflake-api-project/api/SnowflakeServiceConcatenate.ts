@@ -6,7 +6,9 @@ const params: ConcatenateParamsDTO = request.getJSON();
 
 const abapParams = {
     iv_string1: params.param1,
-    iv_string2: params.param2
+    iv_string2: params.param2,
+    iv_string3: params.param3,
+    iv_string4: params.param4
 };
 const abapResult = await execute(abapParams);
 
